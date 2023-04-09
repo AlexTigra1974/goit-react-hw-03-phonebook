@@ -1,6 +1,6 @@
 import { Formik, Field } from 'formik';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
+
 import * as Yup from 'yup';
 import { Form, FormField, Button, ErrorMessage } from './ContactForm.styled';
 
@@ -35,7 +35,6 @@ export const ContactForm = ({ onSubmit }) => {
         onSubmit={(values, actions) => {
           onSubmit({
             ...values,
-            id: nanoid(),
           });
           actions.resetForm();
         }}
